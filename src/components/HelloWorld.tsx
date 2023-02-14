@@ -3,12 +3,12 @@ import { testRepo } from '../repository/sample'
 
 export const HelloWorld = () => {
   const [isLoading, setIsLoading] = useState(true)
-  const [data, setData] = useState(null)
+  const [data, setData] = useState<string | null>(null)
 
   const fetchData = useCallback(async () => {
     const repo = testRepo()
     const responseData = await repo.postTest('1')
-    setData(responseData)
+    setData(responseData.id)
     setIsLoading(false)
   }, [])
 

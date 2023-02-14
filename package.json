@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev-msw": "VITE_MSW=active vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
@@ -17,7 +18,11 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react-swc": "^3.0.0",
+    "msw": "^1.0.1",
     "typescript": "^4.9.3",
     "vite": "^4.1.0"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
